@@ -1,7 +1,6 @@
 <?php
 
 include_once 'config/config.php';
-include_once 'functions/F_json_validate.php';
 global $mysqli;
 
 
