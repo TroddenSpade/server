@@ -1,0 +1,12 @@
+[24-Sep-2019 07:04:54 America/New_York] PHP Warning:  include_once(functions/F_json_validate.php): failed to open stream: No such file or directory in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 8
+[24-Sep-2019 07:04:54 America/New_York] PHP Warning:  include_once(): Failed opening 'functions/F_json_validate.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 8
+[24-Sep-2019 07:04:54 America/New_York] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 17
+[24-Sep-2019 07:06:40 America/New_York] PHP Warning:  include_once(functions/F_json_validate.php): failed to open stream: No such file or directory in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 8
+[24-Sep-2019 07:06:40 America/New_York] PHP Warning:  include_once(): Failed opening 'functions/F_json_validate.php' for inclusion (include_path='.:/opt/alt/php73/usr/share/pear') in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 8
+[24-Sep-2019 07:06:40 America/New_York] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 17
