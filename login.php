@@ -10,9 +10,9 @@ $ip = (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) ? $_SERVER["HTTP_CF_CONNECTING_
 
 $rawBody = file_get_contents("php://input");
 $data = array(); // Initialize default data array
-$data = json_decode($rawBody); // Then decode it
-$username = $mysqli->escape_string($data->username);
-$password = $mysqli->escape_string($data->password);
+$data = json_decode($rawBody,true); // Then decode it
+$username = $mysqli->escape_string($data['username']);
+$password = $mysqli->escape_string($data['password']);
 
 if ($mysqli->query("SELECT GET_LOCK('$username',10) ")) {
 
