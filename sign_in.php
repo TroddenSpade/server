@@ -12,7 +12,7 @@ $data = array(); // Initialize default data array
 $data = json_decode($rawBody,true); // Then decode itv
 $username = $mysqli->escape_string($data['username']);
 $password = $mysqli->escape_string($data['password']);
-if ($mysqli->query("SELECT GET_LOCK('$username',10) ")) {
+if ($mysqli->query("SELECT GET_LOCK('$username',1) ")) {
 
     $sign_in_result = $mysqli->query("SELECT token FROM users WHERE username='$username' AND password='$password' LIMIT 1");
     if ($sign_in_result->num_rows == 1) {

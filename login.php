@@ -14,7 +14,7 @@ $data = json_decode($rawBody,true); // Then decode it
 $username = $mysqli->escape_string($data['username']);
 $password = $mysqli->escape_string($data['password']);
 
-if ($mysqli->query("SELECT GET_LOCK('$username',10) ")) {
+if ($mysqli->query("SELECT GET_LOCK('$username',1) ")) {
 
     $mysqli->query("SELECT username FROM users WHERE username='$username'");
     if ($mysqli->affected_rows > 0) {
