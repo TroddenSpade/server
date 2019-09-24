@@ -18,9 +18,9 @@ if ($mysqli->query("SELECT GET_LOCK('$username',10) ")) {
     if ($sign_in_result->num_rows == 1) {
 
         $user_row = $sign_in_result->fetch_assoc();
-        $response['status'] = 200;
         $token = $user_row['token'];
         $response['token'] = $token;
+        $response['status'] = 200;
         http_response_code(200);
 
     } else {
