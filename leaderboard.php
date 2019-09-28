@@ -11,7 +11,7 @@ global $mysqli;
 
 $ip = (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER["REMOTE_ADDR"];
 $myArray = array();
-if ($result = $mysqli->query("SELECT username,`1`,`2`,`3`,`4`,score FROM users ORDER BY score DESC, sum_time DESC")) {
+if ($result = $mysqli->query("SELECT username,`1`,`2`,`3`,`4`,`5`,`6`,`7`,`8`,`9`,score FROM users ORDER BY score DESC, sum_time DESC")) {
 
     while($row = $result->fetch_array(MYSQLI_ASSOC)) {
             $myArray[] = $row;

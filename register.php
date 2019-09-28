@@ -30,7 +30,7 @@ if(
             
         } else {
             $token = sha1($username . $password);
-            $mysqli->query("INSERT INTO users VALUES('$username','$password','$token')");
+            $mysqli->query("INSERT INTO users (`username`, `password`, `token`) VALUES('$username','$password','$token')");
             
             http_response_code(200);
             echo json_encode(
