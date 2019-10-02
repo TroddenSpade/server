@@ -10,3 +10,8 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/parsasam/domains/parsasam.ir/public_html/ctf/sign_in.php on line 17
+[02-Oct-2019 05:53:09 America/New_York] PHP Notice:  Undefined variable: username in /home/parsasam/domains/parsasam.ir/public_html/ctf/leaderboard.php on line 15
+[02-Oct-2019 05:53:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home/parsasam/domains/parsasam.ir/public_html/ctf/leaderboard.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/parsasam/domains/parsasam.ir/public_html/ctf/leaderboard.php on line 24

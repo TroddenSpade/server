@@ -13,39 +13,43 @@ $ip = (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) ? $_SERVER["HTTP_CF_CONNECTING_
 
 $rawBody = file_get_contents("php://input");
 $data = array(); // Initialize default data array
-$data = json_decode($rawBody,true); // Then decode it
+$data = json_decode($rawBody, true);
 $username = $mysqli->escape_string($data['username']);
 $password = $mysqli->escape_string($data['password']);
 
-if(
-   !empty($username) &&
-   !empty($password)
-   ){
+$response = array();
+if (
+    !empty($username) &&
+    !empty($password)
+) {
     if ($mysqli->query("SELECT GET_LOCK('$username',1) ")) {
-        
+
         $mysqli->query("SELECT username FROM users WHERE username='$username'");
         if ($mysqli->affected_rows > 0) {
             http_response_code(400);
-            echo json_encode(array("message" => "user exists!"));
-            
+            $response['message']="user already exists!";
+            //TODO automatic login
         } else {
             $token = sha1($username . $password);
-            $mysqli->query("INSERT INTO users (`username`, `password`, `token`) VALUES('$username','$password','$token')");
-            
+            $type = rand(0,3);
+
+            $mysqli->query("INSERT INTO users(username,password, token,type ) VALUES('$username','$password','$token','$type')");
+
             http_response_code(200);
-            echo json_encode(
-            array(
-                "token" => $token,
-                "username"=> $username
-            ));
+            $response['token']=$token;
+            $response['username']=$username;
+            $response['type']=$type;
         }
-    }else {
+    } else {
         $mysqli->query("INSERT INTO warnings VALUES ('$username')");
         http_response_code(406);
-        echo json_encode(array("message" => "لطفا کمی آهسته تر"));
+        $response['message']="لطفا کمی آهسته تر";
 
     }
-}else{
+} else {
     http_response_code(400);
-    echo json_encode(array("message" => "Unable to create user. Data is incomplete."));
+    $response['message'] = "Unable to create user. Data is incomplete.";
 }
+$response = json_encode($response);
+echo $response;
+
