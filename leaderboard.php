@@ -25,7 +25,6 @@ if ($mysqli->query("SELECT GET_LOCK('$username',5) ")) {
                 if ($mysqli->affected_rows > 0) {
                     $question_row = $leaderboard_question_query_result->fetch_assoc();
                     $list[$i] = date("H:i", $question_row['time']);
-                    $response['status'] = "found time at " . $list[$i];
 
                 }
             }
