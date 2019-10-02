@@ -6,8 +6,10 @@ header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Origin,Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
+include_once 'functions/F_benchmark.php';
 include_once 'config/config.php';
 global $mysqli;
+global $performance;
 
 $ip = (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER["REMOTE_ADDR"];
 $response = array();
@@ -41,4 +43,5 @@ if ($mysqli->query("SELECT GET_LOCK('$username',5) ")) {
 }
 $response = json_encode($response);
 echo $response;
-$mysqli->query("INSERT INTO activities(username,request,response,type) VALUES ('$username','$rawBody','$response','leader board')");
+F_benchmark($performance);
+//$mysqli->query("INSERT INTO activities(username,request,response,type) VALUES ('$username','$rawBody','$response','leader board')");
