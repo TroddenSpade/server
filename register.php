@@ -16,7 +16,6 @@ $data = array(); // Initialize default data array
 $data = json_decode($rawBody, true);
 $username = $mysqli->escape_string($data['username']);
 $password = $mysqli->escape_string($data['password']);
-
 $response = array();
 if (
     !empty($username) &&

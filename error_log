@@ -1,0 +1,32 @@
+[01-Dec-2019 09:32:16 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:32:16 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:32:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:32:50 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:33:20 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:33:20 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:34:30 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:34:30 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:34:46 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:34:46 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:36:13 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:36:13 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:37:45 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:37:45 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:37:48 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:37:48 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:38:30 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:38:30 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:38:53 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:38:53 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:39:48 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:39:48 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:40:30 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:40:30 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:41:03 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:41:03 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:43:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:43:56 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 09:46:25 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'kntuctfi_empty'@'localhost' (using password: YES) in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 09:46:25 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4
+[01-Dec-2019 11:27:51 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'kntuctfi_empty'@'localhost' to database 'kntuctfi_database' in /home/kntuctfi/public_html/api/config/config.php on line 3
+[01-Dec-2019 11:27:51 UTC] PHP Warning:  mysqli::set_charset(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/config/config.php on line 4

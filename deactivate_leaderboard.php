@@ -12,7 +12,7 @@ $res = $mysqli->query("UPDATE constants SET leaderboard_availability=2");
 if($res){
     http_response_code(200);
     $response['message']="Leaderboard Deactivated.";
-}else{
+} else{
     http_response_code(400);
     $response['message']="Leaderboard Deactivation Failed!";
 }
