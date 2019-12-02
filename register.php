@@ -1,6 +1,6 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: http://localhost:8080");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS");
 header("Access-Control-Max-Age: 3600");
@@ -21,34 +21,36 @@ if (
     !empty($username) &&
     !empty($password)
 ) {
-    if ($mysqli->query("SELECT GET_LOCK('$username',1) ")) {
+    $mysqli->query("SELECT username FROM users WHERE username='$username'");
+    if ($mysqli->affected_rows > 0) {
+        http_response_code(400);
+        $response['message']="user already exists!";
+        //TODO automatic login
+    } else {
+        $token = sha1($username . $password);
 
-        $mysqli->query("SELECT username FROM users WHERE username='$username'");
-        if ($mysqli->affected_rows > 0) {
-            http_response_code(400);
-            $response['message']="user already exists!";
-            //TODO automatic login
-        } else {
-            $token = sha1($username . $password);
-            $type = rand(0,3);
-
-            $mysqli->query("INSERT INTO users(username,password, token,type ) VALUES('$username','$password','$token','$type')");
-
+        if ($mysqli->query("INSERT INTO users(username,password, token ) VALUES('$username','$password','$token')")
+            === TRUE) {
+            $mysqli->query("INSERT INTO leaderboard(question_number,user)
+                                         VALUES ('-1','$username')");
+            
+            echo "user created successfully";
             http_response_code(200);
             $response['token']=$token;
             $response['username']=$username;
-            $response['type']=$type;
+        } else {
+            http_response_code(400);
+            echo "Error creating User: " . $mysqli->error;
         }
-    } else {
-        $mysqli->query("INSERT INTO warnings VALUES ('$username')");
-        http_response_code(406);
-        $response['message']="لطفا کمی آهسته تر";
 
+        
     }
+
 } else {
     http_response_code(400);
     $response['message'] = "Unable to create user. Data is incomplete.";
 }
+
 $response = json_encode($response);
 echo $response;
 

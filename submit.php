@@ -34,8 +34,8 @@ if (!empty($token) &&
         $leaderboard_availability_query_result = $mysqli->query("SELECT leaderboard_availability FROM constants LIMIT 1");
         if ($leaderboard_availability_row = $leaderboard_availability_query_result->fetch_assoc()) {
             if ($leaderboard_availability_row['leaderboard_availability'] == 1) {
-                $answer_json = json_decode(file_get_contents(D_answers_file), true);
-                if ($answer_json[$nop][$type] == $ctf) {
+                $answer=F_get_answers($nop,$type);
+                if ($answer == $ctf) {
                     $mysqli->query("DELETE FROM leaderboard WHERE user = '$username' AND question_number = '$nop'");
                     $mysqli->query("INSERT INTO leaderboard(question_number,user)
                                          VALUES ('$nop','$username')");

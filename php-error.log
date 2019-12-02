@@ -40,3 +40,20 @@
 [01-Dec-2019 11:40:04 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/register.php on line 18
 [01-Dec-2019 11:40:06 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/register.php on line 17
 [01-Dec-2019 11:40:06 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /home/kntuctfi/public_html/api/register.php on line 18
+[01-Dec-2019 16:29:00 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 19
+[01-Dec-2019 16:29:00 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 20
+[01-Dec-2019 16:29:00 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 24
+[01-Dec-2019 16:29:00 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /Users/parsasam/Documents/github/server/sign_in.php on line 25
+[01-Dec-2019 16:29:00 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/functions/F_benchmark.php on line 7
+[01-Dec-2019 16:29:34 UTC] PHP Notice:  Trying to access array offset on value of type null in /Users/parsasam/Documents/github/server/sign_in.php on line 19
+[01-Dec-2019 16:29:34 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 19
+[01-Dec-2019 16:29:34 UTC] PHP Notice:  Trying to access array offset on value of type null in /Users/parsasam/Documents/github/server/sign_in.php on line 20
+[01-Dec-2019 16:29:34 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 20
+[01-Dec-2019 16:29:34 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 24
+[01-Dec-2019 16:29:34 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /Users/parsasam/Documents/github/server/sign_in.php on line 25
+[01-Dec-2019 16:29:34 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/functions/F_benchmark.php on line 7
+[01-Dec-2019 16:30:17 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 19
+[01-Dec-2019 16:30:17 UTC] PHP Warning:  mysqli::escape_string(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 20
+[01-Dec-2019 16:30:17 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/sign_in.php on line 24
+[01-Dec-2019 16:30:17 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /Users/parsasam/Documents/github/server/sign_in.php on line 25
+[01-Dec-2019 16:30:17 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /Users/parsasam/Documents/github/server/functions/F_benchmark.php on line 7
