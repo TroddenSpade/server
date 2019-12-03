@@ -13,7 +13,7 @@ global $mysqli;
 $ip = (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER["REMOTE_ADDR"];
 
 $rawBody = file_get_contents("php://input");
-$data = array(); // Initialize default data array
+$data = array();
 $data = json_decode($rawBody, true);
 $token = $mysqli->escape_string($data['token']);
 $response = array();

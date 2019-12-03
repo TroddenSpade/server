@@ -31,9 +31,6 @@ if (
 
         if ($mysqli->query("INSERT INTO users(username,password, token ) VALUES('$username','$password','$token')")
             === TRUE) {
-            $mysqli->query("INSERT INTO leaderboard(question_number,user)
-                                         VALUES ('-1','$username')");
-            
             echo "user created successfully";
             http_response_code(200);
             $response['token']=$token;

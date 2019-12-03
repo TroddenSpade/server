@@ -25,29 +25,28 @@ if (!empty($token) &&
     !empty($nop)
 ) {
     $username = "user";
-    $user_query_result = $mysqli->query("SELECT username, type FROM users WHERE token = '$token' LIMIT 1");
+    $user_query_result = $mysqli->query("SELECT username FROM users WHERE token = '$token' LIMIT 1");
     if ($user_row = $user_query_result->fetch_assoc()) {
         $username = $user_row['username'];
-        $type = $user_row['type'];
-        $mysqli->query("INSERT INTO submissions(username,ctf_code,question_number,type)
-                                VALUES ('$username','$ctf','$nop','$type')");
-        $leaderboard_availability_query_result = $mysqli->query("SELECT leaderboard_availability FROM constants LIMIT 1");
-        if ($leaderboard_availability_row = $leaderboard_availability_query_result->fetch_assoc()) {
-            if ($leaderboard_availability_row['leaderboard_availability'] == 1) {
-                $answer=F_get_answers($nop,$type);
-                if ($answer == $ctf) {
-                    $mysqli->query("DELETE FROM leaderboard WHERE user = '$username' AND question_number = '$nop'");
-                    $mysqli->query("INSERT INTO leaderboard(question_number,user)
-                                         VALUES ('$nop','$username')");
-                    $response['status']="submitted to leaderboard";
-                }else{
-                    $response['status']="wrong code real code is :  ";
+        $mysqli->query("INSERT INTO submissions(username,ctf_code,question_number)
+                                VALUES ('$username','$ctf','$nop')");
+        // $leaderboard_availability_query_result = $mysqli->query("SELECT leaderboard_availability FROM constants LIMIT 1");
+        // if ($leaderboard_availability_row = $leaderboard_availability_query_result->fetch_assoc()) {
+        //     if ($leaderboard_availability_row['leaderboard_availability'] == 1) {
+        //         $answer=F_get_answers($nop);
+        //         if ($answer == $ctf) {
+        //             $mysqli->query("DELETE FROM leaderboard WHERE user = '$username' AND question_number = '$nop'");
+        //             $mysqli->query("INSERT INTO leaderboard(question_number,user)
+        //                                  VALUES ('$nop','$username')");
+        //             $response['status']="submitted to leaderboard";
+        //         }else{
+        //             $response['status']="wrong code real code is :  ";
 
-                }
-            } else{
-                $response['status']= "leaderboard is unavailable.";
-            }
-        }
+        //         }
+        //     } else{
+        //         $response['status']= "leaderboard is unavailable.";
+        //     }
+        // }
         http_response_code(200);
         $response['message'] = "Code has been submitted successfully.";
     } else {
